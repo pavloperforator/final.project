@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'AGZeppelin';
+    src: url('./fonts/ag-zeppelin.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'AGZeppelin', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.hero-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.hero-left {
+    right: 100px;
+    width:950px;
+    height: 620px;
+    background-color: #000000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-title {
+    position: absolute;
+    left: 20px;
+    top: 680px;
+    transform: translateY(-50%);
+    font-family: 'AGZeppelin', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    text-orientation: mixed;    
+    opacity: 0.9;
+}
+
+.sushi-img-wrapper {
+    max-width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 100;
+}
+
+.sushi-img-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-right {
+    width: 50%;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.component-gz-text-gz1 {
+    width: 100%;
+    max-width: 610px;
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.component-gz-text-gz2 {
+    color: #fff;
+    font-size: 64px;
+    font-style: normal;
+    font-family: "AGZeppelin", sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-transform: none;
+    text-decoration: none;
+}
+.component-gz-text-gz2, .component-gz-text-gz3 {
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 0;
+}
+.component-gz-text-gz4, .component-gz-text-gz5, .component-gz-text-gz6 {
+    color: #fff;
+    font-size: 64px;
+    font-style: normal;
+    margin-top: 0;
+    text-align: left;
+    font-family: "AGZeppelin", sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    text-transform: none;
+    text-decoration: none;
+}
+
+.menu-btn {
+    display: inline-block;
+    background-color: #600000;
+    color: #ffffff;
+    font-family: "AGZeppelin", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    width: fit-content;
+    
+    position: relative;
+    overflow: hidden; 
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+
+.menu-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #852424; 
+    
+    
+    transform: translateX(-100%); 
+    
+    z-index: -1;
+    transition: transform 0.3s ease-in-out; 
+}
+
+
+.menu-btn:hover::before {
+    transform: translateX(0); 
+}
+
+.menu-btn:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+    }
+    .hero-left, .hero-right {
+        width: 100%;
+        min-height: auto;
+    }
+    .hero-left {
+        padding: 40px 0;
+    }
+    .hero-right {
+        padding: 40px 20px;
+    }
+    .component-gz-text-gz2, .component-gz-text-gz4, .component-gz-text-gz6 {
+        font-size: 36px;
+    }
+    .component-o7-text-o72, .component-o7-text-o74, .component-o7-text-o76, .component-o7-text-o78 {
+        font-size: 16px;
+    }
+    .vertical-title {
+        left: 15px;
+        font-size: 16px;
+    }
+}
+
+.main_sushi {
+   width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: scaleX(-1);
+}

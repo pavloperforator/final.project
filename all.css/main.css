@@ -1,0 +1,110 @@
+/* ==========================================================================
+   ФІКС КАРТИНКИ ТА ТЕКСТУ НА ТЕЛЕФОНАХ (Вставити в кінець all.css)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Робимо головний контейнер вертикальним */
+    .hero-container {
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: auto !important;
+    }
+    
+    /* Ліва частина з картинкою стає зверху на весь екран */
+    .hero-left {
+        width: 100% !important;
+        height: auto !important; /* Скидаємо фіксовану висоту 620px */
+        min-height: auto !important;
+        position: relative !important;
+        top: 0 !important; /* Прибираємо зсув top: 680px */
+        left: 0 !important;
+        right: 0 !important;
+        display: flex !important;
+        justify-content: center !important; /* Центруємо обгортку */
+        align-items: center !important;
+        padding: 40px 20px 20px 20px !important; /* Відступи навколо картинки */
+        box-sizing: border-box !important;
+    }
+    
+    /* Обгортка картинки — робимо її помітною та великою */
+    .sushi-img-wrapper {
+        width: 100% !important;
+        max-width: 320px !important; /* Оптимальний розмір суші на екрані телефона */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: static !important; /* Скидаємо відносні зсуви, якщо вони були */
+        margin: 0 auto !important; /* Чітке центрування */
+    }
+
+    /* Сама картинка адаптується під обгортку */
+    .main_sushi, .sushi-img-wrapper img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        object-fit: contain !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Права частина з текстом стає знизу */
+    .hero-right {
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 20px 20px 60px 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Центруємо вміст */
+        box-sizing: border-box !important;
+    }
+
+    /* Контейнери для тексту */
+    .component-gz-text-gz1, .component-o7-text-o71 {
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Заголовки по центру */
+    .component-gz-text-gz2, .component-gz-text-gz4, .component-gz-text-gz6 {
+        font-size: 32px !important;
+        text-align: center !important;
+        display: block !important;
+    }
+
+    /* Описи по центру */
+    .component-o7-text-o72, .component-o7-text-o74, .component-o7-text-o76, .component-o7-text-o78 {
+        font-size: 16px !important;
+        text-align: center !important;
+        display: block !important;
+    }
+    
+    /* Вертикальний напис ховаємо, щоб не ламав мобільну верстку */
+    .vertical-title {
+        display: none !important;
+    }
+
+    /* Кнопка по центру */
+    .menu-btn {
+        margin: 0 auto !important;
+    }
+}
+
+/* Фікс для середніх екранів ноутбуків, щоб картинка не наповзала на текст */
+@media (max-width: 1400px) and (min-width: 769px) {
+    .hero-left, .hero-right {
+        width: 50% !important;
+    }
+    .hero-left {
+        height: auto !important;
+    }
+    .component-gz-text-gz2, .component-gz-text-gz4, .component-gz-text-gz6 {
+        font-size: 44px !important;
+    }
+    .component-o7-text-o72, .component-o7-text-o74, .component-o7-text-o76, .component-o7-text-o78 {
+        font-size: 18px !important;
+    }
+    .vertical-title {
+        display: none !important;
+    }
+}
