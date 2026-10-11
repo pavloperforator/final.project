@@ -1,6 +1,10 @@
-/* ==========================================================================
-   ФІКС КАРТИНКИ ТА ТЕКСТУ НА ТЕЛЕФОНАХ (Вставити в кінець all.css)
-   ========================================================================== */
+@font-face {
+  font-family: 'Volja-Regular';
+  src: url('./fonts/Volja-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @media (max-width: 768px) {
     /* Робимо головний контейнер вертикальним */
@@ -28,13 +32,7 @@
     
     /* Обгортка картинки — робимо її помітною та великою */
     .sushi-img-wrapper {
-        width: 100% !important;
-        max-width: 320px !important; /* Оптимальний розмір суші на екрані телефона */
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        position: static !important; /* Скидаємо відносні зсуви, якщо вони були */
-        margin: 0 auto !important; /* Чітке центрування */
+        display: none !important; /* Ховаємо обгортку, якщо потрібно */
     }
 
     /* Сама картинка адаптується під обгортку */
@@ -108,3 +106,169 @@
         display: none !important;
     }
 }
+
+
+
+/*меню*/
+
+
+.sushi-card:nth-child(-n+4) {
+  margin-top: -40px; 
+}
+
+.main-menu-title {
+  position: relative;
+  top: -103px;
+  left: 60px;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2B1104; 
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1); 
+
+
+
+}
+
+.menu-sushi {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #b5b2b2;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.sushi-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: -30px;
+  padding: 15px;
+  height: 100%;
+}
+
+.sushi-img {
+  width: 250px;
+  height: 260px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  filter: brightness(0.80);
+  justify-content: center;
+  margin-bottom: -30px;
+  
+}
+
+.sushi-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  text-shadow: 3px 3px 5px rgba(113, 112, 112, 0.549);
+
+}
+
+.sushi-weight {
+  font-size: 13px;
+margin-top: -10px;
+  color: #b5b2b2;
+  margin-bottom: 10px;
+}
+
+.sushi-desc {
+  font-size: 13px;
+color: #b5b2b2;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  min-height: 75px;
+}
+
+.sushi-price-block {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+margin-top: -30px;
+  
+}
+
+
+.current-price {
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+.sushi-btn {
+  display:flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #7b7b7b;
+  border-radius: none;
+  font-weight: bold;
+  cursor: pointer;
+  width: 90px;
+  position: relative;
+  left: 250px;
+  top: -40px;
+  transition: background-color 0.3s, border-color 0.3s;
+
+}
+.sushi-btn:hover {
+  background-color: #600000;
+  border-color: #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+@media (max-width:600px){
+.menu-sushi {
+    grid-template-columns: repeat(1, 1fr);
+   gap: 20px;
+}
+.sushi-card {
+    text-align: left;
+    margin:auto;
+    padding: 60px;
+    padding-top: 0px;
+}
+.sushi-img {
+  width: 100px; 
+  height: 100px; 
+  display: block;       
+  margin: 0 auto 15px; 
+  height: 160px;
+  object-fit: contain;  
+  filter: brightness(0.85);
+}
+.sushi-btn {
+text-align: center;
+  position: relative;
+  left: 150px;
+  top: -30px;
+  width: 70px;
+}
+.sushi-price-block {
+  align-items: left;
+margin-top: -40px;
+  font-size: 6px;
+}
+.sushi-weight {
+  margin-top: -10px;
+  font-size: 6px;
+}
+.sushi-desc {
+  font-size: 6px;
+  min-height: 50px;
+  margin-bottom: 10px;
+  margin-top: -15px;
+}
+.sushi-title {
+  font-size: 14px;
+  text-shadow: 2px 2px 4px rgba(113, 112, 112, 0.549);
+  margin-top: -65px;
+}}
