@@ -1,14 +1,14 @@
-// Регистрируем плагин GSAP
+
 gsap.registerPlugin(ScrollTrigger);
 
-// 1. Контейнеры
+
 const menuSushiContainer = document.querySelector(".menu-sushi");
 const menuSetsContainer = document.querySelector(".menu-sets");
 const menuDrinksContainer = document.querySelector(".menu-drinks");
 const menuSushiBurgersContainer = document.querySelector(".menu-sushiBurgers");
 
 
-// Плавный скролл к якорям с офсетом
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
@@ -24,7 +24,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// 2. ДАННЫЕ МЕНЮ
+//  МЕНЮ
 
 const menuBurgersData = [
   { name: "Суші бургер з ікрою", weight: "265 г", price: "236 грн", sale: "", image: "./images/суші-бургер5.png", description: "Рис, норі, ікра лосося імітована, крем-сир, краб-крем, спайс соус, темпура, огірок, сухарі панко, соус унагі" },
@@ -77,14 +77,14 @@ const menuSetsData = [
   { name: "Лосось-тунець-креветка", weight: "1020 г", price: "952 грн", sale: "", image: "./images/сет8.png", description: "Вершковий тунець, Каліфорнія креветка-мигдаль, Syрний з вугрем, Запечений рол з лососем (не належить до теплих)" }
 ];
 
-// 3. ИСПРАВЛЕННАЯ ФУНКЦИЯ ВЫВОДА КАРТОЧЕК
+
 function renderMenu(menuArray, container) {
   if (!container) return;
   
   let cardsHTML = "";
   
   menuArray.forEach(item => {
-    // Проверяем скидку: если она есть, выводим старую цену
+   
     const saleHTML = item.sale ? `<span class="old-price">${item.sale}</span>` : "";
     
     cardsHTML += `
@@ -107,13 +107,13 @@ function renderMenu(menuArray, container) {
   container.innerHTML = cardsHTML;
 }
 
-// Генерируем карточки на странице
+
 renderMenu(menusushiData, menuSushiContainer);
 renderMenu(menuSetsData, menuSetsContainer); 
 renderMenu(menuDrinksData, menuDrinksContainer);
 renderMenu(menuBurgersData, menuSushiBurgersContainer);
 
-// 4. АНИМАЦИИ GSAP
+
 const tlHero = gsap.timeline({
     scrollTrigger: { trigger: ".hero-container", start: "top 75%", toggleActions: "play none none none" }
 });
@@ -126,3 +126,27 @@ const tlnavigation = gsap.timeline({
 });
 tlnavigation.from(".navigation-box", { y: -50, opacity: 0, duration: 0.5 })
             .from(".navigation a", { y: -30, opacity: 0, duration: 0.5, stagger: 0.1 }, "-=0.2");
+
+            const cards = gsap.utils.toArray(".sushi-card");
+
+
+const itemsPerRow = 4;
+
+for (let i = 0; i < cards.length; i += itemsPerRow) {
+
+    const rowCards = cards.slice(i, i + itemsPerRow);
+
+  
+    gsap.from(rowCards, {
+        y: 70,                   
+        opacity: 0,
+        duration: 0.9,
+        stagger: 0.15,            
+        scrollTrigger: {
+            trigger: rowCards[0],  
+            start: "top 85%",      
+            toggleActions: "play none none none",
+            markers: false        
+        }
+    });
+}
