@@ -1,26 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оші Роллі — Мистецтво моменту</title>
-    <link href="./all.css/component-gz.css" rel="stylesheet" />
-    <link href="./all.css/component-o7.css" rel="stylesheet" />
-    <link href="./all.css/main.css" rel="stylesheet" />
+
+    <link href="./all.css/component-gz.css" rel="stylesheet">
+    <link href="./all.css/component-o7.css" rel="stylesheet">
+    <link href="./all.css/main.css" rel="stylesheet">
 </head>
 <body>
 
+    <div id="site-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:99998;backdrop-filter:blur(3px);"></div>
+
+    <div id="product-modal" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99999;background:#191919;color:#fff;padding:30px;width:90%;max-width:500px;border:1px solid #7b7b7b;box-shadow:0 10px 30px rgba(0,0,0,0.8);font-family:sans-serif;">
+        <div style="text-align:center;position:relative;">
+            <button onclick="closeProductModal()" style="position:absolute;top:-15px;right:-15px;background:none;border:none;color:#b5b2b2;font-size:22px;cursor:pointer;">✕</button>
+            <img id="modal-img" src="" alt="" style="width:200px;height:200px;object-fit:contain;margin-bottom:15px;">
+            <h3 id="modal-title" style="margin:10px 0;font-size:22px;color:#fff;"></h3>
+            <p id="modal-weight" style="color:#b5b2b2;font-size:14px;margin-bottom:10px;"></p>
+            <p id="modal-desc" style="color:#d1d1d1;font-size:14px;line-height:1.5;min-height:60px;margin-bottom:20px;"></p>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;">
+                <span id="modal-price" style="font-size:20px;font-weight:bold;color:#fff;"></span>
+
+                <div style="display:flex;gap:10px;">
+                    <button onclick="closeProductModal()" style="background:#000;color:#fff;border:1px solid #7b7b7b;padding:10px 15px;cursor:pointer;font-weight:bold;">Скасувати</button>
+                    <button id="modal-add-btn" style="background:#600000;color:#fff;border:1px solid #000;padding:10px 20px;cursor:pointer;font-weight:bold;">В кошик</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-modal" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99999;background:#151515;color:#fff;padding:30px;width:95%;max-width:600px;min-width:320px;border:1px solid #600000;box-shadow:0 10px 40px rgba(0,0,0,0.9);font-family:sans-serif;">
+        <h2 style="border-bottom:2px solid #600000;padding-bottom:12px;margin-top:0;display:flex;justify-content:space-between;align-items:center;">
+            <span>Ваше замовлення</span>
+            <button onclick="closeCartModal()" style="background:none;border:none;color:#fff;font-size:20px;cursor:pointer;">✕</button>
+        </h2>
+
+        <div id="cart-items-list" style="margin-top:15px;max-height:300px;overflow-y:auto;padding-right:5px;"></div>
+
+        <div style="margin-top:25px;padding-top:15px;border-top:1px solid rgba(255,255,255,0.2);display:flex;justify-content:space-between;align-items:center;font-weight:bold;font-size:19px;">
+            <span>Всього до сплати:</span>
+            <span id="cart-total-price">0 грн</span>
+        </div>
+
+        <button onclick="alert('Замовлення прийнято!')" style="width:100%;background:#600000;color:#fff;border:none;padding:12px;margin-top:20px;font-size:16px;font-weight:bold;cursor:pointer;border-radius:4px;">Оформити замовлення</button>
+    </div>
+
     <main class="hero-container">
-        
         <section class="hero-left">
             <div class="sushi-img-wrapper">
-                <img class="main_sushi"  src="./images/sushi.jpg" alt="Суші Оші Роллі">
+                <img class="main_sushi" src="./images/sushi.jpg" alt="Суші Оші Роллі">
                 <div class="vertical-title">О<br>ш<br>і<br><br>Р<br>і<br>о<br>ш<br>і</div>
             </div>
         </section>
 
         <section class="hero-right">
-            
             <div id="n68" class="component-gz-text-gz1">
                 <p class="component-gz-text-gz2">Мистецтво</p>
                 <p class="component-gz-text-gz4">моменту на</p>
@@ -37,52 +74,46 @@
             <div>
                 <a href="#main-menu-title" class="menu-btn">меню закладу</a>
             </div>
-
         </section>
-
     </main>
+
     <main id="menu" class="menu">
-<div class="navigation-box">
-<section class="navigation">
-<a href="#main-menu-title" class="nav-sushi"><p>суші</p></a>
-<a href="#main-sets-title" class="nav-sets"><p>сети</p></a>
-<a href="#main-sushiBurgers-title" class="nav-sushiBurgers"><p>суші-бургери</p></a>
-<a href="#main-drinks-title" class="nav-drinks"><p>напої</p></a>
 
-</section>
-</div>
+        <div class="navigation-box">
+            <section class="navigation">
+                <a href="#main-menu-title" class="nav-sushi"><p>суші</p></a>
+                <a href="#main-sets-title" class="nav-sets"><p>сети</p></a>
+                <a href="#main-sushiBurgers-title" class="nav-sushiBurgers"><p>суші-бургери</p></a>
+                <a href="#main-drinks-title" class="nav-drinks"><p>напої</p></a>
 
-
+                <button onclick="openCartModal()" id="floating-cart-btn" aria-label="Відкрити кошик">
+                    <img src="./images/кошик.png" alt="Кошик">
+                    <span id="cart-badge">0</span>
+                </button>
+            </section>
+        </div>
 
         <p><img src="./images/png-transparent-wood-graphy-wood-sign-board-white-rectangle-sign-thumbnail-removebg-preview.png" alt="Меню"></p>
         <p1 id="main-menu-title" class="main-menu-title">суші</p1>
-        <section id="menu-sushi" class="menu-sushi">
-        </section>
+        <section id="menu-sushi" class="menu-sushi"></section>
+
         <p><img src="./images/png-transparent-wood-graphy-wood-sign-board-white-rectangle-sign-thumbnail-removebg-preview.png" alt="Меню"></p>
         <p1 id="main-sets-title" class="main-menu-title">сети</p1>
-        <section id="menu-sets" class="menu-sets">
-        </section>
+        <section id="menu-sets" class="menu-sets"></section>
+
         <p><img src="./images/png-transparent-wood-graphy-wood-sign-board-white-rectangle-sign-thumbnail-removebg-preview.png" alt="Меню"></p>
         <p1 id="main-sushiBurgers-title" class="main-menu-title">бургери</p1>
-        <section id="menu-sushiBurgers" class="menu-sushiBurgers">
-        </section>
+        <section id="menu-sushiBurgers" class="menu-sushiBurgers"></section>
+
         <p><img src="./images/png-transparent-wood-graphy-wood-sign-board-white-rectangle-sign-thumbnail-removebg-preview.png" alt="Меню"></p>
         <p1 id="main-drinks-title" class="main-menu-title">напої</p1>
-        <section id="menu-drinks" class="menu-drinks">
-        </section>
-        
-       
+        <section id="menu-drinks" class="menu-drinks"></section>
+
     </main>
 
-
     <script src="./all.js/gsap.min.js"></script>
-    
-
     <script src="./all.js/ScrollTrigger.min.js"></script>
-    
-
     <script src="./all.js/main.js"></script>
-</body>
 
 </body>
 </html>
