@@ -1,712 +1,132 @@
-@font-face {
-  font-family: 'Volja-Regular';
-  src: url('./fonts/Volja-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
+@font-face { font-family: 'Volja-Regular'; src: url('./fonts/Volja-Regular.otf') format('opentype'); font-weight: normal; font-style: normal; } @media (max-width: 768px) { .hero-container { flex-direction: column !important; height: auto !important; min-height: auto !important; } .hero-left { width: 100% !important; height: auto !important; min-height: auto !important; position: relative !important; top: 0 !important; left: 0 !important; right: 0 !important; display: flex !important; justify-content: center !important; align-items: center !important; padding: 40px 20px 20px 20px !important; box-sizing: border-box !important; } .sushi-img-wrapper { display: none !important; } .main_sushi, .sushi-img-wrapper img { width: 100% !important; height: auto !important; display: block !important; object-fit: contain !important; margin: 0 auto !important; } .hero-right { width: 100% !important; height: auto !important; min-height: auto !important; padding: 20px 20px 60px 20px !important; display: flex !important; flex-direction: column !important; align-items: center !important; box-sizing: border-box !important; } .component-gz-text-gz1, .component-o7-text-o71 { text-align: center !important; width: 100% !important; max-width: 100% !important; } .component-gz-text-gz2, .component-gz-text-gz4, .component-gz-text-gz6 { font-size: 32px !important; text-align: center !important; display: block !important; } .component-o7-text-o72, .component-o7-text-o74, .component-o7-text-o76, .component-o7-text-o78 { font-size: 16px !important; text-align: center !important; display: block !important; } .vertical-title { display: none !important; } .menu-btn { margin: 0 auto !important; } } @media (max-width: 1400px) and (min-width: 769px) { .hero-left, .hero-right { width: 50% !important; } .hero-left { height: auto !important; } .component-gz-text-gz2, .component-gz-text-gz4, .component-gz-text-gz6 { font-size: 44px !important; } .component-o7-text-o72, .component-o7-text-o74, .component-o7-text-o76, .component-o7-text-o78 { font-size: 18px !important; } .vertical-title { display: none !important; } } 
 
-
-@media (max-width: 768px) {
-    
-    .hero-container {
-        flex-direction: column !important;
-        height: auto !important;
-        min-height: auto !important;
-    }
-
-
-    
-
-    .hero-left {
-        width: 100% !important;
-        height: auto !important;
-        min-height: auto !important;
-        position: relative !important;
-        top: 0 !important; 
-        left: 0 !important;
-        right: 0 !important;
-        display: flex !important;
-        justify-content: center !important; 
-        align-items: center !important;
-        padding: 40px 20px 20px 20px !important;
-        box-sizing: border-box !important;
-    }
-    
-   
-    .sushi-img-wrapper {
-        display: none !important; 
-    }
-
-   
-    .main_sushi, .sushi-img-wrapper img {
-        width: 100% !important;
-        height: auto !important;
-        display: block !important;
-        object-fit: contain !important;
-        margin: 0 auto !important;
-    }
-    
-   
-    .hero-right {
-        width: 100% !important;
-        height: auto !important;
-        min-height: auto !important;
-        padding: 20px 20px 60px 20px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important; 
-        box-sizing: border-box !important;
-    }
-
-
-    .component-gz-text-gz1, .component-o7-text-o71 {
-        text-align: center !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    
-    .component-gz-text-gz2, .component-gz-text-gz4, .component-gz-text-gz6 {
-        font-size: 32px !important;
-        text-align: center !important;
-        display: block !important;
-    }
-
-   
-    .component-o7-text-o72, .component-o7-text-o74, .component-o7-text-o76, .component-o7-text-o78 {
-        font-size: 16px !important;
-        text-align: center !important;
-        display: block !important;
-    }
-    
-    
-    .vertical-title {
-        display: none !important;
-    }
-
-   
-    .menu-btn {
-        margin: 0 auto !important;
-    }
-}
-
-
-@media (max-width: 1400px) and (min-width: 769px) {
-    .hero-left, .hero-right {
-        width: 50% !important;
-    }
-    .hero-left {
-        height: auto !important;
-    }
-    .component-gz-text-gz2, .component-gz-text-gz4, .component-gz-text-gz6 {
-        font-size: 44px !important;
-    }
-    .component-o7-text-o72, .component-o7-text-o74, .component-o7-text-o76, .component-o7-text-o78 {
-        font-size: 18px !important;
-    }
-    .vertical-title {
-        display: none !important;
-    }
-}
-
-
-
-/*меню*/
-
-.sushi-card {
-  height: 150%;
-  width: 100%;
-  margin-right:10px ;
-}
-
-.sushi-card:nth-child(-n+4) {
-  margin-top: -40px; 
-}
-
+/* 🌟 ОНОВЛЕНІ ЗАГОЛОВКИ МЕНЮ (БЕЗ ТАБЛИЧОК) */
 .main-menu-title {
-  position: relative;
-  top: -103px;
-  left: 60px;
-  font-size: 50px;
+  position: static !important;
+  font-size: 42px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 30px;
-  color: #2B1104; 
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1); 
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: #a40000; /* Акуратний червоний колір */
+  background: none !important; /* На випадок якщо картинка була фоном */
+  text-shadow: none !important;
 }
 
-
-.menu-sushi,
-.menu-sets,
-.menu-drinks,
-.menu-sushiBurgers {
+.menu-sushi, .menu-sets, .menu-drinks, .menu-sushiBurgers {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   align-items: stretch;
-}
+} .old-price { text-decoration: line-through; color: #b5b2b2; font-size: 14px; margin-right: 10px; } 
 
-.old-price {
-  text-decoration: line-through;
-  color: #b5b2b2;
-  font-size: 14px;
-  margin-right: 10px;
-}
-
+/* Скинуто шкідливий негативний маржин карток для десктопа */
 .sushi-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  margin-top: -30px;
   padding: 15px;
   height: 100%;
+  margin-top: 0px !important; 
+} 
+
+.sushi-card:nth-child(-n+4) {
+  margin-top: 0px !important; /* Тепер картки не наповзають вгору */
 }
-
-.menu-drinks .sushi-img {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  margin-bottom: 15px;
-  filter: brightness(0.80);
-  justify-content: center;
-  margin-bottom: 30px;
+ .menu-drinks .sushi-img { width: 200px; height: 200px; object-fit: contain; margin-bottom: 15px; filter: brightness(0.80); justify-content: center; margin-bottom: 30px; } .menu-sushiBurgers .sushi-img { width: 200px; height: 200px; object-fit: contain; margin-bottom: 15px; filter: brightness(0.80); justify-content: center; margin-bottom: 30px; } .sushi-img { width: 250px; height: 260px; object-fit: contain; margin-bottom: 15px; filter: brightness(0.80); justify-content: center; margin-bottom: -30px; } .sushi-title { font-size: 16px; font-weight: bold; margin: 0 0 5px 0; text-shadow: 3px 3px 5px rgba(113, 112, 112, 0.549); } .sushi-weight { font-size: 13px; margin-top: -5px; color: #b5b2b2; margin-bottom: 10px; } .sushi-desc { font-size: 13px; color: #b5b2b2; line-height: 1.4; margin: 0 0 20px 0; min-height: 75px; } .sushi-price-block { display: flex; flex-direction: column; align-items: flex-start; margin-top: -30px; } .current-price { font-size: 16px; font-weight: bold; } .sushi-btn { display: flex; justify-content: center; padding: 10px; background-color: #000000; color: #ffffff; border: 1px solid #7b7b7b; border-radius: none; font-weight: bold; cursor: pointer; width: 90px; position: relative; left: 250px; top: -25px; transition: background-color 0.3s, border-color 0.3s; } .sushi-btn:hover { background-color: #600000; border-color: #000000; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); } .navigation-box { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; color: #fff; } .navigation { display: flex; justify-content: center; gap: 200px; font-size: 20px; cursor: pointer; width: 100%; background-color: rgba(25, 25, 25, 0.3); backdrop-filter: blur(5px); border-bottom: 1px solid rgba(130, 0, 0, 0.2); } a { text-decoration: none; color: #fff; } #site-overlay { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.78); backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px); z-index: 999; animation: overlayShow 0.3s ease; } #product-modal, #cart-modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 650px; max-width: calc(100% - 30px); max-height: 85vh; overflow-y: auto; padding: 30px; box-sizing: border-box; color: #fff; background: #111; border: 1px solid #383838; border-radius: 12px; box-shadow: 0 25px 90px rgba(0, 0, 0, 0.8); z-index: 1000; animation: modalShow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); scrollbar-width: thin; scrollbar-color: #555 #111; } #product-modal *, #cart-modal * { box-sizing: border-box; } #product-modal h2, #product-modal h3, #cart-modal h2, #cart-modal h3 { color: #fff; font-weight: 900; font-style: italic; letter-spacing: -0.5px; } #modal-img { display: block; width: 100%; max-width: 340px; height: 210px; object-fit: contain; margin: 0 auto 20px; transition: transform 0.3s ease; } #modal-img:hover { transform: scale(1.05); } #modal-title { text-align: center; font-size: 27px; margin: 10px 0; } #modal-weight { text-align: center; color: #aaa; margin: 10px 0; } #modal-desc { color: #c6c6c6; text-align: center; line-height: 1.7; margin: 18px 0 28px; } #modal-price { color: #fff; font-size: 25px; font-weight: 900; } #product-modal button, #cart-modal button { font-family: inherit; font-weight: 800; cursor: pointer; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease; } #modal-add-btn { padding: 13px 22px; color: #fff; background: #a40000; border: 1px solid #c60000; border-radius: 5px; } #modal-add-btn:hover { background: #e00000; border-color: #ff3333; transform: translateY(-2px); } #cart-modal h2 { font-size: 30px; margin: 0 0 25px; padding-bottom: 18px; border-bottom: 1px solid #333; } #cart-items-list { display: flex; flex-direction: column; gap: 12px; color: #aaa; line-height: 1.5; } .cart-item { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 15px; padding: 16px; background: #191919; border: 1px solid #292929; border-radius: 8px; transition: border-color 0.2s ease, background 0.2s ease; animation: itemShow 0.25s ease; } .cart-item:hover { background: #202020; border-color: #555; } .cart-item__info { min-width: 0; } .cart-item__name { display: block; color: #fff; font-size: 15px; font-weight: 800; overflow-wrap: anywhere; } .cart-item__price { display: block; margin-top: 5px; color: #999; font-size: 13px; } .cart-item__controls { display: flex; align-items: center; gap: 9px; } #cart-modal .cart-quantity-btn { width: 31px; height: 31px; color: #fff; background: #292929; border: 1px solid #454545; border-radius: 5px; font-size: 18px; } #cart-modal .cart-quantity-btn:hover { background: #a40000; border-color: #d00000; } .cart-item__quantity { min-width: 20px; color: #fff; text-align: center; font-weight: 800; } .cart-item__total { color: #fff; font-size: 14px; font-weight: 900; white-space: nowrap; } #cart-modal .cart-remove-btn { grid-column: 1 / -1; justify-self: end; padding: 6px 10px; color: #ff6969; background: transparent; border: 1px solid #492525; border-radius: 5px; } #cart-modal .cart-remove-btn:hover { color: #fff; background: #a40000; border-color: #a40000; } #cart-total-price { display: block; margin-top: 24px; padding-top: 20px; color: #fff; border-top: 1px solid #333; font-size: 27px; font-weight: 900; } #cart-items-list:empty { display: none; } #product-modal::-webkit-scrollbar, #cart-modal::-webkit-scrollbar { width: 6px; } #product-modal::-webkit-scrollbar-thumb, #cart-modal::-webkit-scrollbar-thumb { background: #555; border-radius: 10px; } @keyframes overlayShow { from { opacity: 0; } to { opacity: 1; } } @keyframes modalShow { from { opacity: 0; transform: translate(-50%, -47%) scale(0.96); } to { opacity: 1; transform: translate(-50%, -50%) scale(1); } } @keyframes itemShow { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } } @media (max-width: 550px) { #product-modal, #cart-modal { padding: 20px; max-height: 88vh; width: calc(100% - 20px); } #cart-modal h2 { font-size: 25px; } .cart-item { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 12px; } .cart-item__controls { grid-column: 1; grid-row: 2; } .cart-item__total { grid-column: 2; grid-row: 1; } #modal-title { font-size: 22px; } #modal-img { height: 170px; } } .navigation { display: flex; align-items: center; flex-wrap: wrap; } #floating-cart-btn { position: relative; display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; padding: 5px; margin-left: 20px; background: transparent; border: none; cursor: pointer; flex-shrink: 0; transition: transform 0.3s ease; } #floating-cart-btn:hover { transform: scale(1.1); } #floating-cart-btn img { width: 100%; height: 100%; object-fit: contain; } #cart-badge { position: absolute; top: 0; right: 0; display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: #600000; color: white; font-size: 11px; font-weight: bold; }
+.menu-drinks .sushi-img { width: 200px; height: 200px; object-fit: contain; margin-bottom: 15px; filter: brightness(0.80); justify-content: center; margin-bottom: 30px; } .menu-sushiBurgers .sushi-img { width: 200px; height: 200px; object-fit: contain; margin-bottom: 15px; filter: brightness(0.80); justify-content: center; margin-bottom: 30px; } .sushi-img { width: 250px; height: 260px; object-fit: contain; margin-bottom: 15px; filter: brightness(0.80); justify-content: center; margin-bottom: -30px; } .sushi-title { font-size: 16px; font-weight: bold; margin: 0 0 5px 0; text-shadow: 3px 3px 5px rgba(113, 112, 112, 0.549); } .sushi-weight { font-size: 13px; margin-top: -5px; color: #b5b2b2; margin-bottom: 10px; } .sushi-desc { font-size: 13px; color: #b5b2b2; line-height: 1.4; margin: 0 0 20px 0; min-height: 75px; } .sushi-price-block { display: flex; flex-direction: column; align-items: flex-start; margin-top: -30px; } .current-price { font-size: 16px; font-weight: bold; } .sushi-btn { display: flex; justify-content: center; padding: 10px; background-color: #000000; color: #ffffff; border: 1px solid #7b7b7b; border-radius: none; font-weight: bold; cursor: pointer; width: 90px; position: relative; left: 250px; top: -25px; transition: background-color 0.3s, border-color 0.3s; } .sushi-btn:hover { background-color: #600000; border-color: #000000; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); } .navigation-box { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; color: #fff; } .navigation { display: flex; justify-content: center; gap: 200px; font-size: 20px; cursor: pointer; width: 100%; background-color: rgba(25, 25, 25, 0.3); backdrop-filter: blur(5px); border-bottom: 1px solid rgba(130, 0, 0, 0.2); } a { text-decoration: none; color: #fff; } #site-overlay { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.78); backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px); z-index: 999; animation: overlayShow 0.3s ease; } #product-modal, #cart-modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 650px; max-width: calc(100% - 30px); max-height: 85vh; overflow-y: auto; padding: 30px; box-sizing: border-box; color: #fff; background: #111; border: 1px solid #383838; border-radius: 12px; box-shadow: 0 25px 90px rgba(0, 0, 0, 0.8); z-index: 1000; animation: modalShow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); scrollbar-width: thin; scrollbar-color: #555 #111; } #product-modal *, #cart-modal * { box-sizing: border-box; } #product-modal h2, #product-modal h3, #cart-modal h2, #cart-modal h3 { color: #fff; font-weight: 900; font-style: italic; letter-spacing: -0.5px; } #modal-img { display: block; width: 100%; max-width: 340px; height: 210px; object-fit: contain; margin: 0 auto 20px; transition: transform 0.3s ease; } #modal-img:hover { transform: scale(1.05); } #modal-title { text-align: center; font-size: 27px; margin: 10px 0; } #modal-weight { text-align: center; color: #aaa; margin: 10px 0; } #modal-desc { color: #c6c6c6; text-align: center; line-height: 1.7; margin: 18px 0 28px; } #modal-price { color: #fff; font-size: 25px; font-weight: 900; } #product-modal button, #cart-modal button { font-family: inherit; font-weight: 800; cursor: pointer; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease; } #modal-add-btn { padding: 13px 22px; color: #fff; background: #a40000; border: 1px solid #c60000; border-radius: 5px; } #modal-add-btn:hover { background: #e00000; border-color: #ff3333; transform: translateY(-2px); } #cart-modal h2 { font-size: 30px; margin: 0 0 25px; padding-bottom: 18px; border-bottom: 1px solid #333; } #cart-items-list { display: flex; flex-direction: column; gap: 12px; color: #aaa; line-height: 1.5; } .cart-item { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 15px; padding: 16px; background: #191919; border: 1px solid #292929; border-radius: 8px; transition: border-color 0.2s ease, background 0.2s ease; animation: itemShow 0.25s ease; } .cart-item:hover { background: #202020; border-color: #555; } .cart-item__info { min-width: 0; } .cart-item__name { display: block; color: #fff; font-size: 15px; font-weight: 800; overflow-wrap: anywhere; } .cart-item__price { display: block; margin-top: 5px; color: #999; font-size: 13px; } .cart-item__controls { display: flex; align-items: center; gap: 9px; } #cart-modal .cart-quantity-btn { width: 31px; height: 31px; color: #fff; background: #292929; border: 1px solid #454545; border-radius: 5px; font-size: 18px; } #cart-modal .cart-quantity-btn:hover { background: #a40000; border-color: #d00000; } .cart-item__quantity { min-width: 20px; color: #fff; text-align: center; font-weight: 800; } .cart-item__total { color: #fff; font-size: 14px; font-weight: 900; white-space: nowrap; } #cart-modal .cart-remove-btn { grid-column: 1 / -1; justify-self: end; padding: 6px 10px; color: #ff6969; background: transparent; border: 1px solid #492525; border-radius: 5px; } #cart-modal .cart-remove-btn:hover { color: #fff; background: #a40000; border-color: #a40000; } #cart-total-price { display: block; margin-top: 24px; padding-top: 20px; color: #fff; border-top: 1px solid #333; font-size: 27px; font-weight: 900; } #cart-items-list:empty { display: none; } #product-modal::-webkit-scrollbar, #cart-modal::-webkit-scrollbar { width: 6px; } #product-modal::-webkit-scrollbar-thumb, #cart-modal::-webkit-scrollbar-thumb { background: #555; border-radius: 10px; } @keyframes overlayShow { from { opacity: 0; } to { opacity: 1; } } @keyframes modalShow { from { opacity: 0; transform: translate(-50%, -47%) scale(0.96); } to { opacity: 1; transform: translate(-50%, -50%) scale(1); } } @keyframes itemShow { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } } @media (max-width: 550px) { #product-modal, #cart-modal { padding: 20px; max-height: 88vh; width: calc(100% - 20px); } #cart-modal h2 { font-size: 25px; } .cart-item { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 12px; } .cart-item__controls { grid-column: 1; grid-row: 2; } .cart-item__total { grid-column: 2; grid-row: 1; } #modal-title { font-size: 22px; } #modal-img { height: 170px; } } .navigation { display: flex; align-items: center; flex-wrap: wrap; } #floating-cart-btn { position: relative; display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; padding: 5px; margin-left: 20px; background: transparent; border: none; cursor: pointer; flex-shrink: 0; transition: transform 0.3s ease; } #floating-cart-btn:hover { transform: scale(1.1); } #floating-cart-btn img { width: 100%; height: 100%; object-fit: contain; } #cart-badge { position: absolute; top: 0; right: 0; display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: #600000; color: white; font-size: 11px; font-weight: bold; }
+/* 🌟 ОПТИМІЗОВАНИЙ МОБІЛЬНИЙ МЕДІА-ЗАПИТ ДЛЯ ТЕЛЕФОНІВ */
+@media (max-width: 600px) {
+.main-menu-title {
+position: static !important;
+font-size: 28px !important;
+margin: 35px auto 20px auto !important;
+color: #a40000 !important;
+text-align: center !important;
+display: block !important;
 }
-
-.menu-sushiBurgers .sushi-img {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  margin-bottom: 15px;
-  filter: brightness(0.80);
-  justify-content: center;
-  margin-bottom: 30px;
+.menu-sushi, .menu-sets, .menu-drinks, .menu-sushiBurgers {
+grid-template-columns: repeat(1, 1fr) !important;
+gap: 25px !important;
+padding: 0 15px !important;
 }
-
-
-
-.sushi-img {
-  width: 250px;
-  height: 260px;
-  object-fit: contain;
-  margin-bottom: 15px;
-  filter: brightness(0.80);
-  justify-content: center;
-  margin-bottom: -30px;
+.sushi-card {
+display: flex !important;
+flex-direction: column !important;
+justify-content: space-between !important;
+align-items: center !important;
+text-align: center !important;
+margin: 0 auto !important;
+padding: 20px !important;
+height: auto !important;
+background: #191919 !important;
+border-radius: 8px !important;
 }
-
+.sushi-img, .menu-drinks .sushi-img, .menu-sushiBurgers .sushi-img {
+width: 100% !important;
+max-width: 180px !important;
+height: 180px !important;
+margin: 0 auto 15px !important;
+object-fit: contain !important;
+filter: brightness(0.9) !important;
+position: static !important;
+}
 .sushi-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 0 5px 0;
-  text-shadow: 3px 3px 5px rgba(113, 112, 112, 0.549);
+font-size: 18px !important;
+margin: 0 0 8px 0 !important;
+text-shadow: none !important;
+color: #fff !important;
 }
-
 .sushi-weight {
-  font-size: 13px;
-  margin-top: -5px;
-  color: #b5b2b2;
-  margin-bottom: 10px;
+font-size: 13px !important;
+margin: 0 0 12px 0 !important;
+color: #b5b2b2 !important;
 }
-
 .sushi-desc {
-  font-size: 13px;
-  color: #b5b2b2;
-  line-height: 1.4;
-  margin: 0 0 20px 0;
-  min-height: 75px;
+font-size: 14px !important;
+line-height: 1.4 !important;
+min-height: auto !important;
+margin: 0 0 20px 0 !important;
+color: #e0e0e0 !important;
 }
-
 .sushi-price-block {
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-start;
-  margin-top: -30px;
+display: flex !important;
+flex-direction: row !important;
+justify-content: space-between !important;
+align-items: center !important;
+width: 100% !important;
+margin-top: 10px !important;
+padding-top: 15px !important;
+border-top: 1px solid #333 !important;
 }
-
 .current-price {
-  font-size: 16px;
-  font-weight: bold;
+font-size: 18px !important;
+font-weight: bold !important;
 }
-
+.old-price {
+font-size: 13px !important;
+margin-right: 5px !important;
+}
 .sushi-btn {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  background-color: #000000;
-  color: #ffffff;
-  border: 1px solid #7b7b7b;
-  border-radius: none;
-  font-weight: bold;
-  cursor: pointer;
-  width: 90px;
-  position: relative;
-  left: 250px;
-  top: -25px;
-  transition: background-color 0.3s, border-color 0.3s;
+position: static !important;
+width: auto !important;
+min-width: 100px !important;
+padding: 10px 15px !important;
+text-align: center !important;
+background-color: #a40000 !important;
+border-radius: 6px !important;
+font-size: 14px !important;
+margin: 0 !important;
 }
-
-.sushi-btn:hover {
-  background-color: #600000;
-  border-color: #000000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.navigation-box {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  color: #fff;
-}
-
 .navigation {
-  display: flex;
-  justify-content: center;
-  gap: 200px;
-  font-size: 20px;
-  cursor: pointer;
-  width: 100%;
-  background-color: rgba(25, 25, 25, 0.3);
-  backdrop-filter: blur(5px);
-  border-bottom: 1px solid rgba(130, 0, 0, 0.2);
+gap: 20px !important;
+padding: 15px 10px !important;
+font-size: 16px !important;
+justify-content: center !important;
 }
 
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-@media (max-width:600px){
- 
-  .menu-sushi,
-  .menu-sets {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-  }
-  .sushi-card {
-    text-align: left;
-    margin: auto;
-    padding: 60px;
-    padding-top: 0px;
-  }
-  .sushi-img {
-    width: 100px; 
-    height: 100px; 
-    display: block;       
-    margin: 0 auto 15px; 
-    height: 160px;
-    object-fit: contain;  
-    filter: brightness(0.85);
-  }
-  .sushi-btn {
-    text-align: center;
-    position: relative;
-    left: 150px;
-    top: -30px;
-    width: 70px;
-  }
-  .sushi-price-block {
-    align-items: left;
-    margin-top: -40px;
-    font-size: 6px;
-  }
-  .sushi-weight {
-    margin-top: -10px;
-    font-size: 6px;
-  }
-  .sushi-desc {
-    font-size: 6px;
-    min-height: 50px;
-    margin-bottom: 10px;
-    margin-top: -15px;
-  }
-  .sushi-title {
-    font-size: 14px;
-    text-shadow: 2px 2px 4px rgba(113, 112, 112, 0.549);
-    margin-top: -65px;
-  }
-}
-
-
-
-
-#site-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.78);
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
-    z-index: 999;
-    animation: overlayShow 0.3s ease;
-}
-
-
-
-#product-modal,
-#cart-modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 650px;
-    max-width: calc(100% - 30px);
-    max-height: 85vh;
-    overflow-y: auto;
-    padding: 30px;
-    box-sizing: border-box;
-    color: #fff;
-    background: #111;
-    border: 1px solid #383838;
-    border-radius: 12px;
-    box-shadow: 0 25px 90px rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    animation: modalShow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-    scrollbar-width: thin;
-    scrollbar-color: #555 #111;
-}
-
-#product-modal *,
-#cart-modal * {
-    box-sizing: border-box;
-}
-
-
-
-#product-modal h2,
-#product-modal h3,
-#cart-modal h2,
-#cart-modal h3 {
-    color: #fff;
-    font-weight: 900;
-    font-style: italic;
-    letter-spacing: -0.5px;
-}
-
-
-
-#modal-img {
-    display: block;
-    width: 100%;
-    max-width: 340px;
-    height: 210px;
-    object-fit: contain;
-    margin: 0 auto 20px;
-    transition: transform 0.3s ease;
-}
-
-#modal-img:hover {
-    transform: scale(1.05);
-}
-
-#modal-title {
-    text-align: center;
-    font-size: 27px;
-    margin: 10px 0;
-}
-
-#modal-weight {
-    text-align: center;
-    color: #aaa;
-    margin: 10px 0;
-}
-
-#modal-desc {
-    color: #c6c6c6;
-    text-align: center;
-    line-height: 1.7;
-    margin: 18px 0 28px;
-}
-
-#modal-price {
-    color: #fff;
-    font-size: 25px;
-    font-weight: 900;
-}
-
-
-
-#product-modal button,
-#cart-modal button {
-    font-family: inherit;
-    font-weight: 800;
-    cursor: pointer;
-    transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
-}
-
-#modal-add-btn {
-    padding: 13px 22px;
-    color: #fff;
-    background: #a40000;
-    border: 1px solid #c60000;
-    border-radius: 5px;
-}
-
-#modal-add-btn:hover {
-    background: #e00000;
-    border-color: #ff3333;
-    transform: translateY(-2px);
-}
-
-
-
-#cart-modal h2 {
-    font-size: 30px;
-    margin: 0 0 25px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid #333;
-}
-
-
-
-#cart-items-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    color: #aaa;
-    line-height: 1.5;
-}
-
-
-
-.cart-item {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    align-items: center;
-    gap: 15px;
-    padding: 16px;
-    background: #191919;
-    border: 1px solid #292929;
-    border-radius: 8px;
-    transition: border-color 0.2s ease, background 0.2s ease;
-    animation: itemShow 0.25s ease;
-}
-
-.cart-item:hover {
-    background: #202020;
-    border-color: #555;
-}
-
-.cart-item__info {
-    min-width: 0;
-}
-
-.cart-item__name {
-    display: block;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 800;
-    overflow-wrap: anywhere;
-}
-
-.cart-item__price {
-    display: block;
-    margin-top: 5px;
-    color: #999;
-    font-size: 13px;
-}
-
-.cart-item__controls {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-}
-
-#cart-modal .cart-quantity-btn {
-    width: 31px;
-    height: 31px;
-    color: #fff;
-    background: #292929;
-    border: 1px solid #454545;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-#cart-modal .cart-quantity-btn:hover {
-    background: #a40000;
-    border-color: #d00000;
-}
-
-.cart-item__quantity {
-    min-width: 20px;
-    color: #fff;
-    text-align: center;
-    font-weight: 800;
-}
-
-.cart-item__total {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 900;
-    white-space: nowrap;
-}
-
-#cart-modal .cart-remove-btn {
-    grid-column: 1 / -1;
-    justify-self: end;
-    padding: 6px 10px;
-    color: #ff6969;
-    background: transparent;
-    border: 1px solid #492525;
-    border-radius: 5px;
-}
-
-#cart-modal .cart-remove-btn:hover {
-    color: #fff;
-    background: #a40000;
-    border-color: #a40000;
-}
-
-
-
-#cart-total-price {
-    display: block;
-    margin-top: 24px;
-    padding-top: 20px;
-    color: #fff;
-    border-top: 1px solid #333;
-    font-size: 27px;
-    font-weight: 900;
-}
-
-
-
-#cart-items-list:empty {
+#imgmenu{
     display: none;
 }
-
-
-
-#product-modal::-webkit-scrollbar,
-#cart-modal::-webkit-scrollbar {
-    width: 6px;
-}
-
-#product-modal::-webkit-scrollbar-thumb,
-#cart-modal::-webkit-scrollbar-thumb {
-    background: #555;
-    border-radius: 10px;
-}
-
-
-
-@keyframes overlayShow {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes modalShow {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -47%) scale(0.96);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-@keyframes itemShow {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-@media (max-width: 550px) {
-    #product-modal,
-    #cart-modal {
-        padding: 20px;
-        max-height: 88vh;
-        width: calc(100% - 20px);
-    }
-
-    #cart-modal h2 {
-        font-size: 25px;
-    }
-
-    .cart-item {
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 12px;
-        padding: 12px;
-    }
-
-    .cart-item__controls {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .cart-item__total {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    #modal-title {
-        font-size: 22px;
-    }
-
-    #modal-img {
-        height: 170px;
-    }
-}
-  
-.navigation {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#floating-cart-btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 55px;
-    height: 55px;
-    padding: 5px;
-    margin-left: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-#floating-cart-btn:hover {
-    transform: scale(1.1);
-}
-
-#floating-cart-btn img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-#cart-badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #600000;
-    color: white;
-    font-size: 11px;
-    font-weight: bold;
 }
